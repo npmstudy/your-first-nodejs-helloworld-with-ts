@@ -1,4 +1,4 @@
-# your-first-nodejs-helloworld-with-ts
+# Your first Node.js Helloworld with TypeScript
 
 ## What is in this repository?
 
