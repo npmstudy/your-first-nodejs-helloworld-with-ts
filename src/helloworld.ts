@@ -1,8 +1,7 @@
+import { IPerson } from "..";
 
-import { IPerson } from ".."
-
-export class HelloWorld implements IPerson{
+export class HelloWorld implements IPerson {
   say(name: string): void {
-    console.log(`Hello, ${name}!`)
+    console.log(`Hello, ${name}!`);
   }
 }

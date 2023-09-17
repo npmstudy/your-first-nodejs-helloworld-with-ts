@@ -1,3 +1,3 @@
 export interface IPerson {
-    say(name: string): void;
+  say(name: string): void;
 }

@@ -1,4 +1,4 @@
-import { test, mock, describe } from "node:test";
+import { test, describe } from "node:test";
 import assert from "node:assert";
 
 import { HelloWorld } from "../src/helloworld";
@@ -9,7 +9,7 @@ describe("test suite", function () {
     const log = t.mock.method(global.console, "log");
 
     assert.strictEqual(log.mock.callCount(), 0);
-    // run some test
+    // call hello world say method
     const cli: IPerson = new HelloWorld();
     cli.say("use TypeScript to write Node.js");
 
