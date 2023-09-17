@@ -1,0 +1,33 @@
+{
+  "name": "with-ts",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/helloworld.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "start": "npm run build && npm test",
+    "test": "npx tsd && tsx --test",
+    "build": "tsup src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.2",
+    "tsd": "^0.29.0",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.10"
+  },
+  "tsup": {
+    "format": "esm",
+    "target": "node20",
+    "splitting": false,
+    "minify": false,
+    "clean": true
+  },
+  "files": [
+    "dist",
+    "index.d.ts"
+  ]
+}
