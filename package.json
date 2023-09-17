@@ -7,7 +7,7 @@
   "types": "./index.d.ts",
   "scripts": {
     "start": "npm test && npm run build",
-    "test": "npx tsd && tsx --test",
+    "test": "npx tsd && tsx --test test/*.ts",
     "build": "tsup src"
   },
   "keywords": [],
