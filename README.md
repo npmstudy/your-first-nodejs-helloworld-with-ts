@@ -5,6 +5,7 @@
 - use [tsx](https://github.com/esbuild-kit/tsx) as typescript register & executor
 - use [tsup](https://github.com/egoist/tsup) as transpiler from ts to esm
 - use [tsd](https://github.com/SamVerschueren/tsd) as type test runner
+- support 2 ways to debug in vscode
 
 ## Usages
 
