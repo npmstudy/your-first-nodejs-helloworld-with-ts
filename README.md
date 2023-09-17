@@ -5,7 +5,7 @@
 - use [tsx](https://github.com/esbuild-kit/tsx) as typescript register & executor
 - use [tsup](https://github.com/egoist/tsup) as transpiler from ts to esm
 - use [tsd](https://github.com/SamVerschueren/tsd) as type test runner
-- support 2 ways to debug in vscode
+
 
 ## Usages
 
@@ -26,6 +26,54 @@ transpile ts to esm for release
 ```
 $ npm build
 ```
+
+## Support 2 ways to debug in vscode
+
+1、run with node --inspect
+
+```
+$ npm run debug
+```
+
+in .vscode/launch.json
+
+```
+  {
+      "name": "Attach to tsx",
+      "port": 9229,
+      "request": "attach",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+```
+
+2、run directly in .vscode/launch.json
+
+```
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "使用tsx调试",
+      "runtimeArgs": [
+        "--loader",
+        "tsx"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/main.ts",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    }
+```
+
+
+
+
+
 
 ## Requirements
 

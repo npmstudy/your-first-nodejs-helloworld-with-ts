@@ -8,7 +8,8 @@
   "scripts": {
     "start": "npm test && npm run build",
     "test": "npx tsd && tsx --test test/*.ts",
-    "build": "tsup src"
+    "build": "tsup src",
+    "debug": "tsx --inspect-brk src.main.ts"
   },
   "keywords": [],
   "author": "",
