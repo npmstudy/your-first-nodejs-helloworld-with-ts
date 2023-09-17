@@ -1,12 +1,12 @@
 {
   "name": "with-ts",
   "version": "1.0.0",
-  "description": "",
+  "description": "your first nodejs helloworld with ts",
   "type": "module",
   "main": "./dist/helloworld.js",
   "types": "./index.d.ts",
   "scripts": {
-    "start": "npm run build && npm test",
+    "start": "npm test && npm run build",
     "test": "npx tsd && tsx --test",
     "build": "tsup src"
   },
