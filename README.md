@@ -53,9 +53,9 @@ in .vscode/launch.json
 
 ```
     {
+      "name": "debug with tsx loader",
       "type": "node",
       "request": "launch",
-      "name": "使用tsx调试",
       "runtimeArgs": [
         "--loader",
         "tsx"
