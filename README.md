@@ -8,6 +8,7 @@
 - use [tsx](https://github.com/esbuild-kit/tsx) as typescript register & executor
 - use [tsup](https://github.com/egoist/tsup) as transpiler from ts to esm
 - use [tsd](https://github.com/SamVerschueren/tsd) as type test runner
+- use [tsdoc](https://tsdoc.org/) as document
 - use Node.js v20 test runner
 - use c8 for coverage
 
