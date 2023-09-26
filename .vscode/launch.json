@@ -12,9 +12,11 @@
         "<node_internals>/**"
       ],
       "program": "${file}",
-      "args": [
+      "runtimeArgs": [
         "--loader",
-        "tsx",
+        "tsx"
+      ],
+      "args": [
         "--test"
       ]
     },

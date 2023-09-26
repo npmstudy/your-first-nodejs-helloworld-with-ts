@@ -11,14 +11,21 @@
     "test:watch": "tsx --test --test-reporter spec --watch test/*.ts",
     "test:coverage": "c8 tsx --test test/*.ts",
     "build": "tsup src",
-    "debug": "tsx --inspect-brk src.main.ts"
+    "debug": "tsx --inspect-brk src.main.ts",
+    "doc": "api-documenter markdown -i temp -o docs/api && node doc.js && serve dist/docs"
   },
   "keywords": [],
   "author": "npmstudy",
   "license": "ISC",
   "devDependencies": {
+    "@metalsmith/markdown": "^1.10.0",
+    "@microsoft/api-documenter": "^7.23.4",
+    "@microsoft/api-extractor": "^7.37.1",
     "@types/node": "^20.6.2",
     "c8": "^8.0.1",
+    "finalhandler": "^1.2.0",
+    "metalsmith": "^2.6.1",
+    "serve-static": "^1.15.0",
     "tsd": "^0.29.0",
     "tsup": "^7.2.0",
     "tsx": "^3.12.10"

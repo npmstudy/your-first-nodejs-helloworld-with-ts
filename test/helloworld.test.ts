@@ -15,9 +15,9 @@ describe("test suite", function () {
 
     assert.strictEqual(log.mock.callCount(), 1);
   });
-});
 
-test("test if works incorrectly", async function () {
-  const cli: IPerson = new HelloWorld();
-  assert.rejects(async () => await cli.sayHi(), new Error("fail"));
+  test("test if works incorrectly", async function () {
+    const cli: IPerson = new HelloWorld();
+    assert.rejects(async () => await cli.sayHi(), new Error("fail"));
+  });
 });

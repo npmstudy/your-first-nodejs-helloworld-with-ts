@@ -2,15 +2,14 @@
 
 ![build status](https://github.com/npmstudy/your-first-nodejs-helloworld-with-ts/actions/workflows/main.yml/badge.svg) [![codecov](https://codecov.io/github/npmstudy/your-first-nodejs-helloworld-with-ts/graph/badge.svg?token=73T1A0D4Q0)](https://codecov.io/github/npmstudy/your-first-nodejs-helloworld-with-ts)
 
-- use Node.js v20 test runner
-- use c8 for coverage
-
 
 ## What is in this repository?
 
 - use [tsx](https://github.com/esbuild-kit/tsx) as typescript register & executor
 - use [tsup](https://github.com/egoist/tsup) as transpiler from ts to esm
 - use [tsd](https://github.com/SamVerschueren/tsd) as type test runner
+- use Node.js v20 test runner
+- use c8 for coverage
 
 
 ## Usages
