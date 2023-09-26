@@ -1,6 +1,6 @@
 # Your first Node.js Helloworld with TypeScript
 
-![build status](https://github.com/npmstudy/your-first-nodejs-helloworld-with-ts/actions/workflows/main.yml/badge.svg) [![codecov](https://codecov.io/github/npmstudy/your-first-nodejs-helloworld-with-ts/graph/badge.svg?token=CSMN20E3W4)](https://codecov.io/github/npmstudy/node-v20-helloworld)
+![build status](https://github.com/npmstudy/your-first-nodejs-helloworld-with-ts/actions/workflows/main.yml/badge.svg) [![codecov](https://codecov.io/github/npmstudy/your-first-nodejs-helloworld-with-ts/graph/badge.svg?token=73T1A0D4Q0)](https://codecov.io/github/npmstudy/your-first-nodejs-helloworld-with-ts)
 
 - use Node.js v20 test runner
 - use c8 for coverage
