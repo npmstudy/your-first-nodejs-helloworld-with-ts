@@ -1,5 +1,11 @@
+#! /usr/bin/env node
+
 import { HelloWorld } from "./helloworld";
 import { IPerson } from "..";
 
 const cli: IPerson = new HelloWorld();
-cli.say("use TypeScript to write Node.js");
+
+// 调用异步函数
+const person = process.argv[2];
+
+cli.sayHi(person);

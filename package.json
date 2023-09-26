@@ -1,5 +1,5 @@
 {
-  "name": "with-ts",
+  "name": "your-first-nodejs-helloworld-with-ts",
   "version": "1.0.0",
   "description": "your first nodejs helloworld with ts",
   "type": "module",
@@ -7,15 +7,18 @@
   "types": "./index.d.ts",
   "scripts": {
     "start": "npm test && npm run build",
-    "test": "npx tsd && tsx --test test/*.ts",
+    "test": "npx tsd && tsx --test --test-reporter spec test/*.ts ",
+    "test:watch": "tsx --test --test-reporter spec --watch test/*.ts",
+    "test:coverage": "c8 tsx --test test/*.ts",
     "build": "tsup src",
     "debug": "tsx --inspect-brk src.main.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "npmstudy",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.6.2",
+    "c8": "^8.0.1",
     "tsd": "^0.29.0",
     "tsup": "^7.2.0",
     "tsx": "^3.12.10"

@@ -1,3 +1,3 @@
 export interface IPerson {
-  say(name: string): void;
+  sayHi(name?: string): Promise<void>;
 }
