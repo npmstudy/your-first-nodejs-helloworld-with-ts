@@ -4,9 +4,3 @@
 
 ## API Reference
 
-## Packages
-
-|  Package | Description |
-|  --- | --- |
-|  [your-first-nodejs-helloworld-with-ts](./your-first-nodejs-helloworld-with-ts.md) |  |
-
