@@ -2,8 +2,8 @@ import { fileURLToPath } from "node:url";
 import { dirname } from "node:path";
 import http from "node:http";
 import Metalsmith from "metalsmith";
-// import collections from "@metalsmith/collections";
-// import layouts from "@metalsmith/layouts";麻烦
+import collections from "@metalsmith/collections";
+import layouts from "@metalsmith/layouts";
 import markdown from "@metalsmith/markdown";
 import finalhandler from "finalhandler";
 import serveStatic from "serve-static";
@@ -12,7 +12,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const t1 = performance.now();
 
 Metalsmith(__dirname) // parent directory of this file
-  .source("./docs/api") // source directory
+  .source("./docs/") // source directory
   .destination("./dist/docs") // destination directory
   .clean(true) // clean destination before
   .env({
@@ -40,12 +40,11 @@ Metalsmith(__dirname) // parent directory of this file
     }
     // metalsmith["_files"] = files;
   })
-  // .use(
-  //   collections({
-  //     // group all blog posts by internally
-  //     posts: "posts/*.md", // adding key 'collections':'posts'
-  //   })
-  // ) // use `collections.posts` in layouts
+  .use(
+    collections({
+      apis: "docs/api/*.md",
+    })
+  ) // use `collections.posts` in layouts
   .use(markdown()) // transpile all md into html
   // .use(
   //   permalinks({
@@ -53,7 +52,19 @@ Metalsmith(__dirname) // parent directory of this file
   //     relative: false, // put css only in /css
   //   })
   // )
-  // .use(layouts()) // wrap layouts around html
+  .use(
+    layouts({
+      default: "layout.hbs",
+      directory: "./docs/layouts",
+      engineOptions: {
+        helpers: {
+          formattedDate: function (date) {
+            return new Date(date).toLocaleDateString();
+          },
+        },
+      },
+    })
+  ) // wrap layouts around html
   .build((err) => {
     // build process
     if (err) throw err; // error handling is required
