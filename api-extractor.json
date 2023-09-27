@@ -14,7 +14,7 @@
    * SUPPORTED TOKENS: none
    * DEFAULT VALUE: ""
    */
-  "extends": "./api.tsconfig.json"
+  // "extends": "./api.tsconfig.json",
   // "extends": "my-package/include/api-extractor-base.json"
   /**
    * Determines the "<projectFolder>" token that can be used with other config file settings.  The project folder
@@ -30,7 +30,7 @@
    * SUPPORTED TOKENS: <lookup>
    * DEFAULT VALUE: "<lookup>"
    */
-  // "projectFolder": "..",
+  "projectFolder": ".",
   /**
    * (REQUIRED) Specifies the .d.ts file to be used as the starting point for analysis.  API Extractor
    * analyzes the symbols exported by this module.
@@ -95,7 +95,7 @@
      * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
      * DEFAULT VALUE: "<projectFolder>/tsconfig.json"
      */
-    // "tsconfigFilePath": "<projectFolder>/tsconfig.json",
+    "tsconfigFilePath": "<projectFolder>/api.tsconfig.json",
     /**
      * Provides a compiler configuration that will be used instead of reading the tsconfig.json file from disk.
      * The object must conform to the TypeScript tsconfig schema:

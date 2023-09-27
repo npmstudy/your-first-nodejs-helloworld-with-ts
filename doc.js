@@ -32,7 +32,7 @@ Metalsmith(__dirname) // parent directory of this file
     // console.log(metalsmith);
     // console.log(files);
     for (const [key, value] of Object.entries(files)) {
-      console.log(`${key}: ${value}`);
+      console.log(`   - ${key}`);
       files[key]["contents"] = Buffer.from(
         files[key]["contents"].toString().replaceAll(".md", ".html"),
         "utf-8"
