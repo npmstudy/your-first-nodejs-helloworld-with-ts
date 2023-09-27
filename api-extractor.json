@@ -14,7 +14,7 @@
    * SUPPORTED TOKENS: none
    * DEFAULT VALUE: ""
    */
-  // "extends": "./shared/api-extractor-base.json"
+  "extends": "./api.tsconfig.json"
   // "extends": "my-package/include/api-extractor-base.json"
   /**
    * Determines the "<projectFolder>" token that can be used with other config file settings.  The project folder
