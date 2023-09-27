@@ -5,7 +5,7 @@
 
 header {
     padding: 24px 0;
-    border-bottom: 1px solid;
+    border-bottom: 0px solid;
 }
 
 header nav {
@@ -19,7 +19,7 @@ footer {
 
 main {
     min-height: 500px;
-    padding: 24px 0;
+    padding: 2px 0;
 }
 
 time {

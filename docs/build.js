@@ -12,8 +12,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const t1 = performance.now();
 
 Metalsmith(__dirname) // parent directory of this file
-  .source("./docs/") // source directory
-  .destination("./dist/docs") // destination directory
+  .source("./") // source directory
+  .destination("../dist/docs") // destination directory
   .clean(true) // clean destination before
   .env({
     // pass NODE_ENV & other environment variables
@@ -42,7 +42,7 @@ Metalsmith(__dirname) // parent directory of this file
   })
   .use(
     collections({
-      apis: "docs/api/*.md",
+      apis: "api/*.md",
     })
   ) // use `collections.posts` in layouts
   .use(markdown()) // transpile all md into html
@@ -55,7 +55,7 @@ Metalsmith(__dirname) // parent directory of this file
   .use(
     layouts({
       default: "layout.hbs",
-      directory: "./docs/layouts",
+      directory: "./layouts",
       engineOptions: {
         helpers: {
           formattedDate: function (date) {
