@@ -12,7 +12,7 @@
     "test:coverage": "c8 tsx --test test/*.ts",
     "build": "tsup src",
     "debug": "tsx --inspect-brk src.main.ts",
-    "doc": "npx api-extractor run --local && api-documenter markdown -i temp -o docs/api && node doc.js && serve dist/docs"
+    "doc": "npx api-extractor run --local && api-documenter markdown -i temp -o docs/api && node docs/build.js && serve dist/docs"
   },
   "keywords": [],
   "author": "npmstudy",
