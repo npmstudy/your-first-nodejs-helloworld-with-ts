@@ -1,11 +1,11 @@
-import { test, describe } from "node:test";
+import { it, describe } from "node:test";
 import assert from "node:assert";
 
 import { HelloWorld } from "../src/helloworld";
 import { IPerson } from "..";
 
 describe("test suite", function () {
-  test("test if works correctly", async function (t) {
+  it("test if works correctly", async function (t) {
     const log = t.mock.method(global.console, "log");
 
     assert.strictEqual(log.mock.callCount(), 0);
@@ -16,7 +16,7 @@ describe("test suite", function () {
     assert.strictEqual(log.mock.callCount(), 1);
   });
 
-  test("test if works incorrectly", async function () {
+  it("test if works incorrectly", async function () {
     const cli: IPerson = new HelloWorld();
     assert.rejects(async () => await cli.sayHi(), new Error("fail"));
   });
